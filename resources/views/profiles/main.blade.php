@@ -1,8 +1,26 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('title', 'Nge-Mount | Features')
+@section('title', 'Nge-Mount | Main')
 
 @section('content')
+<header class="codrops-header">
+   <a href="{{ url('/') }}"><img src="{{ url('/') }}/img/logo/logo.png" class="codrops-header__title" style="width:230px;margin-top:5px;"></img></a>
+   <p class="codrops-header__tagline">handheld and circle the world</p>
+   <!-- sidebar -->
+   <img src="{{ url('/') }}/uploads/{{ Auth::user()->avatar }}" alt="..." style="width:50px;height:50px;border-radius:50%;margin-right: 70px;margin-top: 30px">
+   <nav class="dummy-links">
+          <a href="{{ route('profile', ['id' => Auth::user()->id]) }}" class="dummy-links__link">
+              Edit Profile <span class="caret"></span>
+          </a>
+          <a href="#" class="dummy-links__link">
+              Jadwal Saya <span class="caret"></span>
+          </a>
+          <form action="{{ route('logout') }}" method="POST" class="dummy-links__link">
+              @csrf
+              <input type="submit" value="Logout" style="background: none;border:none"  class="dummy-links__link">
+          </form>
+   </nav>
+</header>
 <div style="margin: 30px 60px -30px 0px;">
    <div class="cont s--inactive">
        <!-- cont inner start -->
@@ -142,9 +160,9 @@
                            <!-- //form -->
                            <form action="#" id="ooking-form">
                             @if(!Auth::user())
-                               <label class="el__text">Anda harus Login terlebih dahulu.</label>
-                               <a href="{{ route('login') }}"><button class="haruslogin-btn " type="button">Login</button></a>
-                            @else
+                                  <label class="el__text">Anda harus Login terlebih dahulu.</label>
+                                  <a href="{{ route('login') }}"><button class="haruslogin-btn " type="button">Login</button></a>
+                                @else
                                <div class="tab-content">
                                    <div class="tab-pane" id="cari1">
                                        <ul>
@@ -179,8 +197,9 @@
                                <div id="loader" style="display: none;">
                                    <img src="//d2erq0e4xljvr7.cloudfront.net/assets/img/ring.svg">
                                </div>
+                               @endif
                            </form>
-                              @endif
+
                            <!-- //endform -->
 
                            <div class="el__close-btn"></div>
@@ -250,8 +269,9 @@
                                <div id="loader" style="display: none;">
                                    <img src="//d2erq0e4xljvr7.cloudfront.net/assets/img/ring.svg">
                                </div>
+                               @endif
                            </form>
-                             @endif
+
                            <!-- //endform -->
 
                            <div class="el__close-btn"></div>
