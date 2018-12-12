@@ -91,7 +91,7 @@
       <div class="slide-imgwrap">
          <div class="slide__img"><div class="slide__img-inner" style="background-image: url(img/16.jpg);"></div></div>
          <div class="slide__img"><div class="slide__img-inner" style="background-image: url(img/1.jpg);"></div></div>
-         <div class="slide__img"><div class="slide__img-inner" style="background-image: url(img/4.jpg);"></div></div>
+         <div class="slide__img"><div class="slide__img-inner" style="background-image: url(img/3.jpg);"></div></div>
       </div>
       <div class="slide__title">
          <h3 class="slide__title-main">Life isn't Alone</h3>

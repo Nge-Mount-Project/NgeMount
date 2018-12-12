@@ -57,7 +57,7 @@
 					<a class="dummy-links__link" href="{{ route('login') }}">Login</a>
 					<a class="dummy-links__link" href="{{ route('features') }}">Features</a>
 					<a class="dummy-links__link" href="{{ route('news') }}">News</a>
-					<a class="dummy-links__link" href="#">About</a>
+					<a class="dummy-links__link" href="{{ route('about')}}">About</a>
 				</nav>
             @else
             <img src="/uploads/{{ Auth::user()->avatar }}" alt="..." style="width:30px;height:30px;border-radius:50%;margin-right: 70px;margin-top: 30px">
