@@ -21,4 +21,11 @@ Route::get('/about', function () {
 Route::get('features', 'featuresController@index')->name('features');
 Route::get('news', 'newsController@index')->name('news');
 
+Route::group(['middleware' => ['web', 'auth']], function(){
+   Route::get('main', 'mainController@index')->name('main');
+   Route::get('profile/{id}/edit', 'profileController@index')->name('profile');
+   Route::post('avatar', 'profileController@update_avatar')->name('profile.update_avatar');
+   Route::post('del', 'profileController@del_avatar')->name('del.avatar');
+   Route::post('profile/{id}', 'profileController@update')->name('profile.update');
+});
 Auth::routes();

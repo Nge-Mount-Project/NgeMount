@@ -5,26 +5,46 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>@yield('title')</title>
+		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
       <!-- main -->
       <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="{{ url('/') }}/css/style.css">
       <!-- endmain -->
 
       <!-- //form1 -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-      <link rel="stylesheet" href="css/style1.css">
+      <link rel="stylesheet" href="{{ url('/') }}/css/style1.css">
       <!-- endform -->
       <!-- icon -->
-      <link rel="icon" type="image/png" href="img/logo/2.png" />
+      <link rel="icon" type="image/png" href="{{ url('/') }}/img/logo/2.png" />
       <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-      <link rel="stylesheet" type="text/css" href="css/demo.css" />
-      <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
-      <link rel="stylesheet" type="text/css" href="css/slideshow_layouts.css" />
+      <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slideshow.css" />
+      <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/slideshow_layouts.css" />
       <link rel="dns-prefetch" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    	@yield('news_link')
+		<!-- Styles -->
+      <style>
+        .btn-del {
+            border: none;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+            position:absolute;
+            top: 90px;
+            left: 490px;
+            color:red;
+        }
+
+        /* Darker background on mouse-over */
+        .btn-del:hover {
+            color: darkred;
+        }
+      </style>
       <script>document.documentElement.className = 'js';</script>
 	</head>
 	<body>
@@ -48,37 +68,12 @@
 		<!-- main -->
 		<main style="overflow:hidden;">
 			<!-- header -->
-			<header class="codrops-header">
-				<a href="{{ url('/') }}"><img src="img/logo/logo.png" class="codrops-header__title" style="width:230px;margin-top:5px;"></img></a>
-				<p class="codrops-header__tagline">handheld and circle the world</p>
-				<!-- sidebar -->
-            @guest
-				<nav class="dummy-links">
-					<a class="dummy-links__link" href="{{ route('login') }}">Login</a>
-					<a class="dummy-links__link" href="{{ route('features') }}">Features</a>
-					<a class="dummy-links__link" href="{{ route('news') }}">News</a>
-					<a class="dummy-links__link" href="{{ route('about')}}">About</a>
-				</nav>
-            @else
-            <img src="/uploads/{{ Auth::user()->avatar }}" alt="..." style="width:50px;height:50px;border-radius:50%;margin-right: 70px;margin-top: 30px">
-            <nav class="dummy-links">
-                   <a href="{{ route('main') }}" class="dummy-links__link">
-                       {{ Auth::user()->username }} <span class="caret"></span>
-                   </a>
-					<a class="dummy-links__link" href="{{ route('news') }}">News</a>
-                   <form action="{{ route('logout') }}" method="POST" class="dummy-links__link">
-                       @csrf
-                       <input type="submit" value="Logout" style="background: none;border:none"  class="dummy-links__link">
-                   </form>
-            </nav>
-            @endguest
-			</header>
 			@yield('content')
 		</main>
 		<!-- js -->
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/anime.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="{{ url('/') }}/js/imagesloaded.pkgd.min.js"></script>
+		<script src="{{ url('/') }}/js/anime.min.js"></script>
+		<script src="{{ url('/') }}/js/main.js"></script>
 		<script>
 		(function() {
 			var slideshow = new MLSlideshow(document.querySelector('.slideshow'));
