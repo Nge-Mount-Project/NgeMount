@@ -65,7 +65,7 @@
                    <a href="#" class="dummy-links__link">
                        {{ Auth::user()->username }} <span class="caret"></span>
                    </a>
-					<a class="dummy-links__link" href="{{ route('features', ['id' => 'buat-jadwal']) }}">Buat Jadwal</a>
+					<a class="dummy-links__link" href="{{ route('features') }}">Buat Jadwal</a>
 					<a class="dummy-links__link" href="{{ route('news') }}">Cari Barengan</a>
 					<a class="dummy-links__link" href="#">News</a>
                    <form action="{{ route('logout') }}" method="POST" class="dummy-links__link">
