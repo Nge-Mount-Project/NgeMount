@@ -142,31 +142,21 @@
       <br>
       <form class="" action="index.html" method="post">
         <select style="width:350px; height:40px">
-          <option value="Merapi">Gunung Merapi</option>
-          <option value="Prau">Gunung Prau</option>
-          <option value="Merbabu">Gunung Merbabu</option>
-          <option value="Sumbing">Gunung Sumbing</option>
-          <option value="Sindoro">Gunung Sindoro</option>
+          @foreach($join as $jadwal)
+          <option value="Merapi">{{ $jadwal->nama_gunung }}</option>
+          @endforeach
         </select>
-        <br><br>
-        <button type="button" class="btn btn-secondary" style="font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
-      </form>
-
     </div>
     <div class="col-md-4">
       <h2 style="padding-left:105px">Pilih Tanggal</h2>
       <br>
-      <form class="" action="index.html" method="post">
         <select style="width:350px; height:40px">
-          <option value="tgl">18-12-2018</option>
-          <option value="tgl">18-12-2018</option>
-          <option value="tgl">18-12-2018</option>
-          <option value="tgl">18-12-2018</option>
-          <option value="tgl">18-12-2018</option>
-          <option value="tgl">18-12-2018</option>
-        </select>
+           @foreach($join as $jadwal)
+          <option value="tgl">{{ $jadwal->tanggal }}</option>
+          @endforeach
+       </select>
         <br><br>
-        <button type="button" class="btn btn-secondary" style="font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
+        <button type="button" class="btn btn-secondary" style="float:right;font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
       </form>
 
     </div>
