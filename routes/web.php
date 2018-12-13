@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+Route::get('/jadwal', function () {
+    return view('jadwal');
+})->name('jadwal');
 
 Route::get('features', 'featuresController@index')->name('features');
 Route::get('news', 'newsController@index')->name('news');
