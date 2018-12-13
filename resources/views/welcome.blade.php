@@ -109,23 +109,69 @@
 @else
 <br><br><br><br><br>
 <div class="container">
-   <div class="wrap-select">
- 					<div id="dd" class="wrapper-dropdown-3">
- 						<span>Выберите категорию...</span>
- 						<ul class="dropdown">
- 							<li><a href="#">Мягкая мебель</a></li>
- 							<li><a href="#">Корпусная мебель</a></li>
- 							<li><a href="#">Кухни</a></li>
- 							<li><a href="#">Матрасы</a></li>
- 							<li><a href="#">Декор</a></li>
- 							<li><a href="#">Свет</a></li>
- 							<li><a href="#">Столы, стулья</a></li>
- 							<li><a href="#">Ковры</a></li>
- 							<li><a href="#">Сантехника</a></li>
-                             <li><a href="#">Другое</a></li>
- 						</ul>
- 					</div>
- 				</div>
+  <div class="row">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-4">
+      <h1 style="color:white">Cari Barengan</h1>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2 style="padding-left:135px">Tim Info</h2>
+      <br>
+      <div class="card" style="width: 35rem;">
+        <img class="card-img-top" src="img/merapi.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight:bold">Pendakian Gunung Merapi</h5>
+          <p class="card-text">Kuota 6 orang</p>
+          <p class="card-text">Basecamp Sapuangin</p>
+          <p class="card-text">Tanggal 18-12-2018</p>
+          <p class="card-text">Meeting Point Titik 0km Jogja</p>
+          <a href="#" class="btn btn-dark" style="color:grey; font-size:12px; font-weight:bold">&nbsp;GABUNG&nbsp;</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2 style="padding-left:105px">Pilih Gunung</h2>
+      <br>
+      <form class="" action="index.html" method="post">
+        <select style="width:350px; height:40px">
+          <option value="Merapi">Gunung Merapi</option>
+          <option value="Prau">Gunung Prau</option>
+          <option value="Merbabu">Gunung Merbabu</option>
+          <option value="Sumbing">Gunung Sumbing</option>
+          <option value="Sindoro">Gunung Sindoro</option>
+        </select>
+        <br><br>
+        <button type="button" class="btn btn-secondary" style="font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
+      </form>
+
+    </div>
+    <div class="col-md-4">
+      <h2 style="padding-left:105px">Pilih Tanggal</h2>
+      <br>
+      <form class="" action="index.html" method="post">
+        <select style="width:350px; height:40px">
+          <option value="tgl">18-12-2018</option>
+          <option value="tgl">18-12-2018</option>
+          <option value="tgl">18-12-2018</option>
+          <option value="tgl">18-12-2018</option>
+          <option value="tgl">18-12-2018</option>
+          <option value="tgl">18-12-2018</option>
+        </select>
+        <br><br>
+        <button type="button" class="btn btn-secondary" style="font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
+      </form>
+
+    </div>
+  </div>
 </div>
+
 @endguest
 @endsection
