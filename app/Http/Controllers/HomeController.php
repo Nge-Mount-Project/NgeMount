@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\JadwalPendakian;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+      $join = JadwalPendakian::join('gunungs', 'jadwal_pendakians.gunung_id', '=', 'gunungs.id')->distinct()->orderBy('nama_gunung')->get();
+      // dd($join);
+        return view('welcome', compact('join'));
     }
 }
