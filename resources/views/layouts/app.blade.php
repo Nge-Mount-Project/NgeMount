@@ -5,6 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>@yield('title')</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
       <!-- main -->
       <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
       <link rel="stylesheet" href="css/style.css">
@@ -21,12 +22,15 @@
       <link rel="stylesheet" type="text/css" href="css/normalize.css" />
       <link rel="stylesheet" type="text/css" href="css/demo.css" />
       <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
-      <link rel="stylesheet" type="text/css" href="css/slideshow_layouts.css" />
+		<link rel="stylesheet" type="text/css" href="css/slideshow_layouts.css" />
+      <link rel="stylesheet" type="text/css" href="css/cariBarengan/cari.css" />
       <link rel="dns-prefetch" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    	@yield('news_link')
       <script>document.documentElement.className = 'js';</script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	</head>
 	<body>
 
@@ -80,6 +84,7 @@
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/anime.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/cariBarengan/cari.js"></script>
 		<script>
 		(function() {
 			var slideshow = new MLSlideshow(document.querySelector('.slideshow'));

@@ -3,6 +3,7 @@
 @section('title', 'Nge-Mount | Home')
 
 @section('content')
+@guest
 <!-- slide show -->
 <div class="slideshow" tabindex="0">
    <!-- slide 1 -->
@@ -105,4 +106,26 @@
       <button id="next-slide" class="btn btn--arrow" aria-label="Next slide"><svg class="icon icon--next"><use xlink:href="#icon-next"></use></svg></button>
    </nav>
 </div>
+@else
+<br><br><br><br><br>
+<div class="container">
+   <div class="wrap-select">
+ 					<div id="dd" class="wrapper-dropdown-3">
+ 						<span>Выберите категорию...</span>
+ 						<ul class="dropdown">
+ 							<li><a href="#">Мягкая мебель</a></li>
+ 							<li><a href="#">Корпусная мебель</a></li>
+ 							<li><a href="#">Кухни</a></li>
+ 							<li><a href="#">Матрасы</a></li>
+ 							<li><a href="#">Декор</a></li>
+ 							<li><a href="#">Свет</a></li>
+ 							<li><a href="#">Столы, стулья</a></li>
+ 							<li><a href="#">Ковры</a></li>
+ 							<li><a href="#">Сантехника</a></li>
+                             <li><a href="#">Другое</a></li>
+ 						</ul>
+ 					</div>
+ 				</div>
+</div>
+@endguest
 @endsection
