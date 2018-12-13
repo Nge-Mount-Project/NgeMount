@@ -140,25 +140,40 @@
     <div class="col-md-4">
       <h2 style="padding-left:105px">Pilih Gunung</h2>
       <br>
-      <form class="" action="index.html" method="post">
-        <select style="width:350px; height:40px">
+      <form class="" action="{{ route('next') }}" method="POST">
+         @csrf
+        <select style="width:350px; height:40px" name="nama_gunung">
+          @if($next)
+          <option>{{ $join }}</option>
+          @else
           @foreach($join as $jadwal)
-          <option value="Merapi">{{ $jadwal->nama_gunung }}</option>
+          <option>{{ $jadwal->nama_gunung }}</option>
           @endforeach
+          @endif
         </select>
+        <br><br>
+        @if($next)
+        <br>
+        @else
+        <button type="submit" class="btn btn-secondary" style="float:right;font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
+        @endif
+     </form>
     </div>
+    @if($next)
     <div class="col-md-4">
       <h2 style="padding-left:105px">Pilih Tanggal</h2>
       <br>
-        <select style="width:350px; height:40px">
-           @foreach($join as $jadwal)
-          <option value="tgl">{{ $jadwal->tanggal }}</option>
+      <form class="" action="{{ route('cari') }}" method="POST">
+         @csrf
+        <select style="width:350px; height:40px" name="tanggal">
+           @foreach($tgl as $tanggals)
+          <option>{{ $tanggals->tanggal }}</option>
           @endforeach
        </select>
         <br><br>
-        <button type="button" class="btn btn-secondary" style="float:right;font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
+        <button type="submit" class="btn btn-secondary" style="float:right;font-size:12px;font-weight:bold">&nbsp;CARI&nbsp;</button>
       </form>
-
+      @endif
     </div>
   </div>
 </div>

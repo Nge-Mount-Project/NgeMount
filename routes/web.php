@@ -32,5 +32,7 @@ Route::group(['middleware' => ['web', 'auth']], function(){
    Route::post('avatar', 'profileController@update_avatar')->name('profile.update_avatar');
    Route::post('del', 'profileController@del_avatar')->name('del.avatar');
    Route::post('profile/{id}', 'profileController@update')->name('profile.update');
+   Route::post('next', 'HomeController@next')->name('next');
+   Route::post('cari', 'HomeController@cari')->name('cari');
 });
 Auth::routes();
